@@ -1,0 +1,191 @@
+ h1{
+        font-weight: lighter;
+        font-family: Helvetica;
+        font-style: italic;
+    }
+    #wrapper{
+        margin: 1em auto; 
+        padding: 0;
+        width:960px;
+        border:3px solid rgb(0, 74, 158);
+        background-color:white;
+        display: grid;
+        grid-template-columns: repeat(6);
+      }
+
+   
+    header {
+      grid-column: span 6;
+      background-image: linear-gradient(rgb(14, 143, 217),rgb(0, 74, 158));
+      padding-left: 1em;
+      color:lightblue;
+      
+    }
+
+#hi{
+  color:lightblue;
+  text-decoration: none;
+}
+
+    nav{
+        grid-column: span 6;
+        background-image: linear-gradient(rgb(14, 143, 217),rgb(0, 74, 158));
+    }
+       
+    
+    nav ul{
+        
+    padding: 0px;
+    margin: 0px;
+    }
+    nav li {
+        border: 3px solid rgb(0, 74, 158);
+        width: 250px;
+        
+       
+        background-image:linear-gradient(rgb(14, 143, 217),rgb(0, 74, 158)); 
+        display: inline-block;
+        font-weight:lighter;
+        text-align: center;
+        font-family:helvetica;
+       
+    }
+    
+    nav li a {
+        color:lightblue;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    nav li a:hover {
+    text-decoration: none;
+    color:white;
+    }
+    
+    a {
+        text-decoration: none;
+        font-weight:bold;
+        color:red;
+    
+      }
+
+      a:hover {
+        color: blue;
+        text-decoration: none;
+      }
+
+    
+      main {
+        grid-column: span 5;
+        padding:0 1em 0 1em;
+        display: grid;
+      }
+      aside {
+        background-color: lightblue;
+        color:black;
+        grid-column: 6;
+        width:260px;
+        text-align: justify;
+        padding: 10px;
+       
+      }
+
+    #bob{
+      float:right;
+      margin-left: 1em;
+    }
+    
+   
+
+    h2 {
+        font-family: Helvetica;
+        font-weight: lighter;
+        color:rgb(0, 74, 158);
+    }
+    
+    #box  {color:black;
+        padding: 70px;
+        margin: 70px;
+        text-decoration: none;
+        display: block;
+        margin: 0px;
+        background-color:grey;
+        }
+        
+        p {
+            text-align: justify;
+            font-family: Georgia;
+        }
+   footer{
+    border: px solid rgb(0, 74, 158);
+    background-color: rgb(183, 48, 48);
+    color:white;
+    grid-column:span 6;
+    font-family:Verdana;
+    float: left;
+    
+  
+}
+.gtrt{
+  grid-column:2;
+  grid-row: 2;
+}
+
+  .h2{
+    border-bottom: white;
+  }
+
+  
+
+  image{
+    width:240;
+  }
+
+
+  
+  #asideleft{
+    float:left;
+    margin-right: 1em;
+  }
+
+  #leftaside{
+    float:left;
+    margin-right: 1em;
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #aleft{
+    float:left;
+    margin-right: 1em;
+  }
+
+#gotham{
+    grid-column: span 2;
+    padding:0 1em 0 1em;
+}
+#margin{
+  margin-right: 9px;
+  margin-left: 9px;
+}
+#main3{
+grid-column: span 5;
+        padding:1em 0 1em 0 1em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1px;
+        grid-template-rows: 3;
+      }
+       
+      hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 3px solid rgb(0, 74, 158);
+        margin: 1em 0;
+        padding: 0;
+        }
+        #it{
+          text-align: justify;
+        }
