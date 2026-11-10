@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creative Technologist</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <header>
+            <a id="hi" href="https://qgarrett.github.io/Portfolio/Gallery.html" target="_blank">
+                <h1>Creative Technologist</h1>
+            </a>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="https://qgarrett.github.io/Portfolio/index.html" target="_blank">About Me</a></li>
+                <li><a href="https://qgarrett.github.io/Portfolio/Content.html" target="_blank">Content</a></li>
+                <li><a href="https://qgarrett.github.io/Portfolio/aboutthissite.html" target="_blank">Contact Info</a></li>
+            </ul>
+        </nav>
+
+        <!-- CAROUSEL START -->
+        <div class="carousel" id="myCarousel">
+
+            <div class="carousel-track">
+
+                <!-- SLIDE 1 -->
+                <div class="slide">
+                    <main>
+                        <span>
+                            <h2>Who Am I?</h2>
+                            <hr>
+                        </span>
+
+                        <img id="bob"
+                            src="https://qgarrett.github.io/CTK301/me.jpeg"
+                            alt="Picture of Quincy Garrett"
+                            width="200" height="300">
+
+                        <p id="center">
+                            My name is Quincy Garrett you can call me Q; I am an aspiring writer
+                            and game developer. Creating art of any nature has been
+                            a part of my career and personality. I find joy in bringing
+                            life to what is normally discarded or considered meaningless.
+                            As I hone my craft, I draw on personal and everyday life
+                            experiences for inspiration, to truly connect with
+                            well-diversified audiences.
+                        </p>
+                    </main>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="slide">
+                    <img id="bob"
+                            src="https://qgarrett.github.io/Portfolio/chicago.jpeg"
+                            alt="Picture of chicago"
+                            width="200" height="300">
+                    <main>
+                        <h2>My Upbringing</h2>
+                        <hr>
+                        <p id="center">
+                            Growing up in the east side of chicago taught me that the grounds of creation has no limits only te ones you mind instills into you and the bridges of life take time because they are built at your speed. 
+                        </p>
+                    </main>
+                </div>
+
+                
+                <div class="slide">
+                    <main>
+                        <h2>Education</h2>
+                        <hr>
+
+                        <img src="https://qgarrett.github.io/Portfolio/isu logo.png" alt="isu logo" width="150" height="150">
+
+                        <p>I am a proud red bird through and through. From the outstanding professors and genius well thoughtout courses of illinois state university it created a tenacious, yet humbled person within me.</p>
+                    </main>
+                </div>
+
+            </div>
+
+            <!-- NAVIGATION BUTTONS -->
+            <div class="carousel-controls">
+                <button id="prevBtn" type="button">Previous</button>
+                <button id="nextBtn" type="button">Next</button>
+            </div>
+
+        </div>
+        <!-- CAROUSEL END -->
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+       const carousel = document.getElementById("myCarousel");
+        const track = carousel.querySelector(".carousel-track");
+        const slides = carousel.querySelectorAll(".slide");
+
+        const prevBtn = carousel.querySelector("#prevBtn");
+        const nextBtn = carousel.querySelector("#nextBtn");
+
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            track.style.transform =
+                 `translateX(-${currentSlide * carousel.clientWidth}px)`;
+
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+
+        nextBtn.addEventListener("click", function () {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateCarousel();
+            }
+        });
+
+        prevBtn.addEventListener("click", function () {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateCarousel();
+            }
+        });
+
+        updateCarousel();
+         window.addEventListener("resize", updateCarousel);
+    </script>
+
+</body>
+</html>
